@@ -19,7 +19,6 @@ outfile <- args[ 2 ]
 
 print( infile )
 print( outfile )
-stop( "...."  )
 
 # minimal diacritics / #words ratio
 min_ratio <- 2.0
