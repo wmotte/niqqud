@@ -1,8 +1,5 @@
-# make copy of Sefaria data and remove white spaces
+# make copy of Sefaria data
 cp -purv Sefaria-Export/txt .
-
-# Remove Targum data (because of potential overlap with Tanakh)
-# TODO rm -rf txt/Tanakh/Targum/
 
 # output
 mkdir processed
@@ -16,7 +13,7 @@ detox -r -v txt/*/*/*/*/*
 detox -r -v txt/*/*/*/*/*/*
 detox -r -v txt/*/*/*/*/*/*/*
 
-# Remove problematic dirs
+# Rename existing words with spaces
 rename 's/ /__/g' ./txt/Tanakh/Commentary/Rashi/Prophets/Rashi_on_Jonah/Hebrew/*.txt
 rename 's/ /__/g' ./txt/Tanakh/Commentary/Malbim/Prophets/Malbim_on_Obadiah/Hebrew/*.txt
 rename 's/ /__/g' ./txt/Tanakh/Commentary/Malbim/Prophets/Malbim_on_Joel/Hebrew/*.txt
@@ -34,7 +31,8 @@ rename 's/ /__/g' ./txt/Midrash/Aggadic_Midrash/Midrash_Rabbah/Bereishit_Rabbah/
 rename 's/ /__/g' ./txt/Liturgy/Siddur/Siddur_Edot_HaMizrach/Hebrew/*.txt
 
 # Merge all Hebrew into one file
+# officially all text should be be present in merged.txt files, but this is not always the case
 cat `find ./txt -name \*.txt|grep Hebrew` > processed/raw.txt
 
-# remove doubles
+# remove double sentences
 awk '!seen[$0]++' processed/raw.txt > processed/all.txt

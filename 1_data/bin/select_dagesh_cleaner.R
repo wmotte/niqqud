@@ -12,8 +12,6 @@ library( 'stringi' )
 library( 'utf8' )
 
 # read hebrew
-#infile <- './processed/hebrew_with_niqqud_aligned.txt'
-#outfile <- './processed/_tmp.txt'
 infile <- args[ 1 ]
 outfile <- args[ 2 ]
 

@@ -5,5 +5,9 @@ For purposes of disambiguation, a system of diacritical signs ([niqqud](https://
 Natural language processing (NLP) methodology, including speech recognition and speech-to-text algorithms would benefit from a model that accurately predicts niqqud.
 
 ## Dataset
-This repository contains scripts to acquire a dataset of corresponding sentences with and without niqqud. The dataset is devided into a set of training (80%), development (10%) and testing (10%) sentences. This will help to train, optimize and compare NLP models.
+This repository contains scripts to acquire a dataset of corresponding sentences with and without niqqud. The dataset is devided into a set of training (90%), development (5%) and testing (5%) sentences. This will help to train, optimize and compare NLP models.
 Sentences are extracted from [The Sefaria Library](https://www.sefaria.org/), a free and growing library of Jewish texts.
+
+* Total sentences in training set: 211,638
+* Total sentences in test set: 11,758
+* Total sentences in dev set: 11,758
