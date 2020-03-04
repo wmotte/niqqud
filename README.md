@@ -1,4 +1,5 @@
 # Niqqud prediction
+[![DOI](https://zenodo.org/badge/205441433.svg)](https://zenodo.org/badge/latestdoi/205441433)
 
 ## Background
 For purposes of disambiguation, a system of diacritical signs ([niqqud](https://en.wikipedia.org/wiki/Niqqud)) is used to represent vowels or distinguish between alternative pronunciations of letters of the Hebrew alphabet.
